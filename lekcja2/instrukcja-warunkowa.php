@@ -115,7 +115,52 @@
                 echo "Nierozpoznany wybor";
                 break;
         }
-        echo "<br>";
+        echo "<br><br>";
+
+        // $miesiac = "3";
+        $miesiac = rand(1,12);
+        echo "Miesiąc to ";
+        switch ($miesiac) {
+            case '1':
+                echo "Styczeń <br>";
+                break;
+            case '2':
+                echo "Luty <br>";
+                break;
+            case '3':
+                echo "Marzec <br>";
+                break;
+            case '4':
+                echo "Kwiecień <br>";
+                break;
+            case '5':
+                echo "Maj <br>";
+                break;
+            case '6':
+                echo "Czerwiec <br>";
+                break;
+            case '7':
+                echo "Lipiec <br>";
+                break;
+            case '8':
+                echo "Sierpień <br>";
+                break;
+            case '9':
+                echo "Wrzesień <br>";
+                break;
+            case '10':
+                echo "Październik <br>";
+                break;
+            case '11':
+                echo "Listopad <br>";
+                break;
+            case '12':
+                echo "Grudzień <br>";
+                break;
+            default:
+                echo "Nie ma takiego miesiaca <br>";
+                break;
+        }
     ?>
 
 </body>
