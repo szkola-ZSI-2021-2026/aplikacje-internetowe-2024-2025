@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-
+    <h1>Instrukcja wyboru</h1>
     <?php
         $pogoda = "dobra";
 
@@ -80,9 +80,42 @@
 
         // sprawdz czy liczba jest podzielna zarówno przez 3 i 4;
         $liczba = 12;
-        if($liczba % 4 == 0 && $liczba % 3 == 0) {
-            echo "liczba $liczba jest podzielna przez 3 i 4";
+        if($liczba % 3 == 0 && $liczba % 4 == 0) {
+            echo "liczba $liczba jest podzielna przez 3 i 4 <br>";
+        } else {
+            echo "liczba $liczba nie jest podzielna przez 3 i 4 <br>";
         }
+        echo "<br>";
+    ?>
+
+    <hr>
+    <h1>Operator warunkowy</h1>
+    <?php
+        // operator warunkowy
+        // oceń nastroj względem oceny
+        $ocena = rand(1,6);
+        $nastroj = ($ocena > 1) ? "zadowolony" : "nie zadowolony";
+        echo "Dostales $ocena i jestes $nastroj";
+    ?>
+
+    <hr>
+    <h1>Instrukcja wyboru</h1>
+    <?php
+        $plec = 'M';
+        //switch
+        echo "Płeć: ";
+        switch ($plec) {
+            case 'M':
+                echo "mężczyzna";
+                break;
+            case 'K':
+                echo "kobieta";
+                break;
+            default :
+                echo "Nierozpoznany wybor";
+                break;
+        }
+        echo "<br>";
     ?>
 
 </body>
