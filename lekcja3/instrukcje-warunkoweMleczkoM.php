@@ -8,8 +8,6 @@
 <body>
     <h1>Zadanie 1</h1>
     <?php
-        // Oblicz wynik rówanania x = y / z. Pamiętaj że nie wolno dzielić przez 0. Wyisz wynik na ekranie stosownym komunikatem.
-
         $z = 50;
         $y = 40;
         
