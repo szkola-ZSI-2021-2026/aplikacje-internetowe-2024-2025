@@ -137,36 +137,62 @@
     <h3>Funkcje</h3>
     <?php
         // sortowanie 
-        //     sort
+        //     sort     // rosnąco według wartości
         sort($arrI);
         echo "SORT: <br>";
         print_r($arrI);
-        echo "<br>";
-        //     rsort
+        echo "<br><br>";
+        //     rsort    // malejąco według wartości
         rsort($arrI);
         echo "RSORT: <br>";
         print_r($arrI);
-        echo "<br>";
-        //     asort
+        echo "<br><br>";
+        //     asort    // rosnąco według wartości pozostawiając klucze niezmienione
         asort($arrI);
         echo "ASORT: <br>";
         print_r($arrI);
-        echo "<br>";
-        //     arsort
+        echo "<br><br>";
+        //     arsort   // malejąco według wartości pozostawiając klucze niezmienione
         arsort($arrI);
         echo "ARSORT: <br>";
         print_r($arrI);
-        echo "<br>";
-        //     ksort
+        echo "<br><br>";
+        //     ksort    // rosnąco według kluczy pozostawiając wartości kluczy niezmienione
         ksort($arrI);
         echo "KSORT: <br>";
         print_r($arrI);
-        echo "<br>";
-        //     krsort
+        echo "<br><br>";
+        //     krsort   // malejąco według kluczy pozostawiając wartości kluczy niezmienione
         krsort($arrI);
         echo "KRSORT: <br>";
         print_r($arrI);
-        echo "<br>";
+        echo "<br><br>";
+
+        // is_array     // sprawdza czy zmienna jest tablicą
+        if(is_array($tabMultiAso)) {
+            echo "Zmienna jest tablicą <br>";
+        } else {
+            echo "Zmienna nie jest tablicą <br>";
+        }
+        // in_array     // aprawdza czy wartość jest w tablicy
+        if(in_array("Basia", $tabA2)) {
+            echo "Wartość znajduje się w tablicy <br>";
+        } else {
+            echo "Wartośc nie znajduje się w tablicy <br>";
+        }
+        echo in_array("Basia", $tabA2) ? "Jest <br>" : "Nie ma <br>";
+
+        // count,sizeof        // ilosc elementów w tablicy
+        echo "Ilość elementów w tablicy: ".count($arrI)."<br>";
+        echo "Rozmiar elementów w tablicy: ".sizeof($arrI)."<br>";
+        
+        for ($i=0; $i < count($arrI); $i++) { 
+            echo $arrI[$i]." | ";
+        }
+
+        // MAX i MIN
+        echo "MAX: ".max($tab1)."<br>";
+        echo "MIN: ".min($tab1)."<br>";
     ?>
 
     <hr>
@@ -190,5 +216,6 @@
         print_r($tab2);
     ?>
 
+    <hr>
 </body>
 </html>      
