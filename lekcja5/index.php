@@ -268,7 +268,22 @@
         print_r($tabScile1);
         echo "<br>";
 
-        //! array_splice($)
+        //! array_splice($tablica, $index, $ilość_elementów, $tablica2) - wycina lub zastęouje kawałek tablicy tablicą2
+        echo "<br>========================================<br>";
+        $arrSplice0 = array(1,2,3,4,5,6,7,8,9,10,11);
+        print_r($arrSplice0);
+        echo "<br> splice1: ";
+        $arrSplice1 = array_splice($arrSplice0, 4);
+        print_r($arrSplice1);
+        echo "<br> splice0: ";
+        print_r($arrSplice0);
+        echo "<br> <br>";
+        $arrSplice10 = array(1,2,3,4,5,6,7,8,9,10,11);
+        $arrSplice11 = array_splice($arrSplice10, 1, -1, "X");
+        echo "<br> splice10: ";
+        print_r($arrSplice10);
+        echo "<br> splice11: ";
+        print_r($arrSplice11);
     ?>
 
     <hr>
