@@ -136,45 +136,45 @@
     <hr>
     <h3>Funkcje</h3>
     <?php
-        // sortowanie 
-        //     sort     // rosnąco według wartości
+        //! sortowanie 
+        //!     sort     // rosnąco według wartości
         sort($arrI);
         echo "SORT: <br>";
         print_r($arrI);
         echo "<br><br>";
-        //     rsort    // malejąco według wartości
+        //!     rsort    // malejąco według wartości
         rsort($arrI);
         echo "RSORT: <br>";
         print_r($arrI);
         echo "<br><br>";
-        //     asort    // rosnąco według wartości pozostawiając klucze niezmienione
+        //!     asort    // rosnąco według wartości pozostawiając klucze niezmienione
         asort($arrI);
         echo "ASORT: <br>";
         print_r($arrI);
         echo "<br><br>";
-        //     arsort   // malejąco według wartości pozostawiając klucze niezmienione
+        //!     arsort   // malejąco według wartości pozostawiając klucze niezmienione
         arsort($arrI);
         echo "ARSORT: <br>";
         print_r($arrI);
         echo "<br><br>";
-        //     ksort    // rosnąco według kluczy pozostawiając wartości kluczy niezmienione
+        //!     ksort    // rosnąco według kluczy pozostawiając wartości kluczy niezmienione
         ksort($arrI);
         echo "KSORT: <br>";
         print_r($arrI);
         echo "<br><br>";
-        //     krsort   // malejąco według kluczy pozostawiając wartości kluczy niezmienione
+        //!     krsort   // malejąco według kluczy pozostawiając wartości kluczy niezmienione
         krsort($arrI);
         echo "KRSORT: <br>";
         print_r($arrI);
         echo "<br><br>";
 
-        // is_array     // sprawdza czy zmienna jest tablicą
+        //! is_array     // sprawdza czy zmienna jest tablicą
         if(is_array($tabMultiAso)) {
             echo "Zmienna jest tablicą <br>";
         } else {
             echo "Zmienna nie jest tablicą <br>";
         }
-        // in_array     // aprawdza czy wartość jest w tablicy
+        //! in_array     // aprawdza czy wartość jest w tablicy
         if(in_array("Basia", $tabA2)) {
             echo "Wartość znajduje się w tablicy <br>";
         } else {
@@ -182,7 +182,7 @@
         }
         echo in_array("Basia", $tabA2) ? "Jest <br>" : "Nie ma <br>";
 
-        // count,sizeof        // ilosc elementów w tablicy
+        //! count,sizeof        // ilosc elementów w tablicy
         echo "Ilość elementów w tablicy: ".count($arrI)."<br>";
         echo "Rozmiar elementów w tablicy: ".sizeof($arrI)."<br>";
         
@@ -190,9 +190,85 @@
             echo $arrI[$i]." | ";
         }
 
-        // MAX i MIN
-        echo "MAX: ".max($tab1)."<br>";
-        echo "MIN: ".min($tab1)."<br>";
+        //! MAX i MIN
+        echo "MAX: ".max($arrI)."<br>";
+        echo "MIN: ".min($arrI)."<br><br><br>";
+
+        //! explode ($separator, $string) - zamienia ciąg znaków na tablice
+        $string = "To zdanie skłąda się z 7 słów";
+        $tabString = explode(" ", $string);
+        foreach ($tabString as $index => $value) {
+            echo "[$index] $value <br>";
+        }
+
+        //! implode($separator,$tablica) - zamienia tablicę na ciąg znaków
+        echo $string = implode(" ", $tabString);
+    
+        //! array_shift ($arrayshift) - usuwa pierwszy element z tablicy
+        echo "<br><br>";
+        echo "========================================<br>";
+        print_r($arrI2);
+        echo "<br> usunięty element z tablicy arrI2 <br>";
+        array_shift($arrI2);
+        print_r($arrI2);
+
+        //! array_unshift($tablica, $elementy...) - dodaje na początku elementy do tablicy i zraca końcową ilość elementów elemntów w tablicy
+        echo "<br>========================================";
+        echo "<br>";
+        print_r($arrI2);
+        echo "<br> doane elementy do tablicy arrI2 <br>";
+        echo array_unshift($arrI2, 12, 143)."<br>";
+        print_r($arrI2);
+
+        //! array_pop($tablica) - usuwa ostatni element z tablicy
+        echo "<br>========================================<br>";
+        echo "usunięty ostatni elemenet z arrI2 <br>";
+        echo array_pop($arrI2)."<br>";
+        print_r($arrI2);
+
+        //! array_push($tablica, elementy) - dodaje na końcu elementy do tablicy i zwraca końcową ilość elementów wtablicy
+        echo "<br>========================================<br>";
+        echo "dodano ostatnie elemenety do arrI2 <br>";
+        echo array_push($arrI2, 100, 200, 300, 400)."<br>";
+        print_r($arrI2);
+
+        //! array_merge($arr1, $arr2) - łączy dwie tablice
+        echo "<br>========================================<br>";
+        echo "Łączy tablie w jednom <br>";
+        $arrI2A = array_merge($arrI2, $tabA2);
+        print_r($arrI2A);
+        foreach ($arrI2A as $key => $value) {
+            echo "[$key] => $value <br>";
+        }
+
+        //! array_combine($key, $val) - tworzy nową tablice w której wartości pierwszej będą kluczmi, a wartości drugiej będą jej wartościami
+        echo "<br>========================================<br>";
+        $arr1C = array("CITY", "POLAND", "CALIFORNIA","MONAKO","NOWY JORK");
+        $arr2C = array(1,2,3,4,5);
+        echo "Ttworzy nowątablicę na którą składają się dwie inne <br>";
+        $arrCombine = array_combine($arr2C, $arr1C);
+        print_r($arrCombine);
+        echo "<br>";
+        foreach ($arrCombine as $key => $value) {
+            echo "[$key] => $value <br>";
+        }
+
+        //! array_slice($tabela, $index, $ilość_elementów) - kopiuje część tablicy do nowej
+        echo "<br>========================================<br>";
+        $arrSlice0 = array(1,2,3,4,5,6,7,8,9,10,11);
+        print_r($arrSlice0);
+        echo "<br>";
+        $tabScile1 = array_slice($arrSlice0, 6);
+        print_r($tabScile1);
+        echo "<br>";
+        $tabScile1 = array_slice($arrSlice0, 0, 3);
+        print_r($tabScile1);
+        echo "<br>";
+        $tabScile1 = array_slice($arrSlice0, -3, 2);
+        print_r($tabScile1);
+        echo "<br>";
+
+        //! array_splice($)
     ?>
 
     <hr>
@@ -215,7 +291,6 @@
         echo "tab2: <br>";
         print_r($tab2);
     ?>
-
     <hr>
 </body>
 </html>      
