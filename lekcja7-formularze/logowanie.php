@@ -6,10 +6,13 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Dane logowania</h1>
     <?php
-    
-    
-    
+
+        echo "Login: ".$_POST['login']."<br>";
+        echo "Password: ".$_POST['password']."<br>";
+        echo "Zapametaj: ".$_POST['remember']."<br>";
+
     ?>
 </body>
 </html>
