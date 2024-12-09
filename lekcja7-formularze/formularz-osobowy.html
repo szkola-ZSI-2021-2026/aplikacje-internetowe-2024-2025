@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formularz osobowy</h1>
+    <form action="formularz-osobowy.php" method="post">
+        <p>
+            Imię <br>
+            <input type="text" name="fname" value="Tomek">
+        </p>
+        <p>
+            Wiek <br>
+            <input type="number" name="age">
+        </p>
+        <p>
+            Płeć <br>
+            <input type="radio" name="gender" value="K" id="Kradio"> 
+            <label for="Kradio">kobieta</label>
+            <input type="radio" name="gender" value="M" id="Mradio">
+            <label for="Mradio">mężczyzna</label>
+        </p>
+        <p>
+            Języki obce <br>
+            <input type="checkbox" name="languages" id="Angielski" value="Angielski">
+            <label for="Angielski">Angielski</label>
+            <input type="checkbox" name="languages" id="Rosyjski" value="Rosyjski">
+            <label for="Rosyjski">Rosyjski</label>
+            <input type="checkbox" name="languages" id="Niemiecki" value="Niemiecki">
+            <label for="Niemiecki">Niemiecki</label>
+            <input type="checkbox" name="languages" id="Hiszpański" value="Hiszpański">
+            <label for="Hiszpański">Hiszpański</label>
+            <input type="checkbox" name="languages" id="Włoski" value="Włoski">
+            <label for="Włoski">Włoski</label>
+        </p>
+
+        <p>
+            Miasto 
+            <select name="city">
+                <option value="Kielce">Kielce</option>
+                <option value="Kraków">Kraków</option>
+                <option value="Poznań">Poznań</option>
+                <option value="Wrocław">Wrocław</option>
+                <option value="Warszawa">Warszawa</option>
+            </select>
+        </p>
+
+        <p>
+            O mnie <br>
+            <textarea name="aboutMe" cols="30" rows="10" placeholder="Podaj dodatkowe informacje"></textarea>
+        </p>
+        <input type="reset" value="Wyczyść">
+        <input type="submit" value="Wyslij">
+    </form>
+</body>
+</html>
