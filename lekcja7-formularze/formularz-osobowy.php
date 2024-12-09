@@ -9,14 +9,64 @@
     <h1>Dane formularza osobowego</h1>
     
     <?php
-    
-        echo "<p> Imie: ".$_POST['fname']."</p><br>";
-        echo "<p> Wiek: ".$_POST['age']."</p><br>";
-        echo "<p> Płeć: ".$_POST['gender']."</p><br>";
-        echo "<p> Języki obce: ".$_POST['languages']."</p><br>";
-        echo "<p> Miasto: ".$_POST['city']."</p><br>";
-        echo "<p> O autorze: ".$_POST['aboutMe']."</p><br>";
+        if(!empty($_POST['fname']) && !empty($_POST['age'])) {
+            echo "<p> Imie: ".$_POST['fname']."</p>";
 
+            if($_POST['age'] >= 18) {
+                echo "<p> Wiek: ".$_POST['age']."</p>";
+            } else {
+                echo "<h3 style='color:red;'>Jestes zbyt młody na złożenie formularza, jesteś nie pełnoletni.</h3>";
+            }
+        } else {
+            echo "<h3 style='color:red;'>Nie podano imienia lub wieku</h3>";
+        }
+
+        if(isset($_POST['gender'])) {
+            echo "<p> Płeć: ".$_POST['gender']."</p>";
+        } else {
+            echo "<h3 style='color:red;'> Nie podano płci</h3>";
+        }
+
+
+        if(!empty($_POST['languages'])) {
+            // echo "<p> Języki obce: ".$_POST['languages']."</p>";
+            // foreach ($_POST['languages'] as $language) {
+            //     echo "<li>".$language."</li>";
+            // }
+            echo "<p> Znasz poniższe języki obce: </p>";
+            printArrayAsUnorganisedList($_POST['languages']);
+        } else {
+            echo "<h3 style='color:red;'> Nie podano języków obcych</h3>";
+        }
+
+        if(!empty($_POST['city'])) {
+            echo "<p> Miasto: ".$_POST['city']."</p>";
+        } else {
+            echo "<h3 style='color:red;'> Nie podano miasta</h3>";
+        }
+        
+        if(!empty($_POST['aboutMe'])) {
+            echo "<p> O autorze: ".$_POST['aboutMe']."</p>";
+        } else {
+            echo "<h3> Nie podano dodatkowych informacji</h3>";
+        }
+
+        function printArrayAsUnorganisedList($arr) {
+            echo "<ul>";
+            foreach ($arr as $language) {
+                echo "<li>".$language."</li>";
+            }
+            echo "</ul>";    
+        }
+    ?>
+
+    <hr>
+
+    <?php
+        echo "<p>Zawartość tabeli POST</p>";
+        var_dump($_POST);
+        echo "<br><br>";
+        print_r($_POST);
     ?>
 </body>
 </html>
