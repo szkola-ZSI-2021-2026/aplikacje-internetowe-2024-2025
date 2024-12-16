@@ -1,0 +1,15 @@
+        echo "<td>".$_POST["fname"]."</td>";
+        echo "<td>".$_POST["lname"]."</td>";
+        echo "<td>".$_POST["pesel"]."</td>";
+        echo "<td>".$_POST["email"]."</td>";
+        echo "<td>".$_POST["phone"]."</td>";
+        echo "<td>".$_POST["ul"]."</td>";
+        echo "<td>".$_POST["nrDom"]."</td>";
+        echo "<td>".$_POST["nrM"]."</td>";
+        echo "<td>".$_POST["code"]."</td>";
+        echo "<td>".$_POST["city"]."</td>";
+        echo "<td>".$_POST["Dur"]."</td>";
+        echo "<td>".$_POST["doctor"]."</td>";
+        echo "<td>".$_POST["Dwiz"]."</td>";
+        echo "<td>".$_POST["Gwiz"]."</td>";
+        echo "<td>".$_POST["uwagi"]."</td>";
