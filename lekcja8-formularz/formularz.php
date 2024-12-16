@@ -162,7 +162,6 @@
         echo "<tr> <th colspan='2'> Dane pacjenta </th> </tr>";
         for($i = 0; $i < sizeof($_POST); $i++){
             echo "<tr>";
-
             echo "<th>".$dataTypes[$i]."</th>";
 
             if(!empty($_POST[$names[$i]])) {
