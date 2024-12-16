@@ -151,5 +151,29 @@
 
         echo "</table>";
     ?>
+
+    <h1>Dane osobowe v2</h1>
+    <?php
+        $names = array('fname', 'lname', 'pesel', 'email', 'phone', 'ul', 'nrDom', 'nrM', 'code', 'city', 'Dur', 'doctor', 'Dwiz', 'Gwiz', 'uwagi');
+
+        $dataTypes = array('Imie', 'Nazwisko', 'PESEL', 'E-mail', 'Phone', 'Ul', 'Numer domu', 'Numer mieszkania', 'Kod pocztowy', 'Miasto', 'Data urodzenia', 'Lekarz', 'Data wizyty', 'Godzina wizyty', 'Dodatkowe uwagi');
+    
+        echo "<table>";
+        echo "<tr> <th colspan='2'> Dane pacjenta </th> </tr>";
+        for($i = 0; $i < sizeof($_POST); $i++){
+            echo "<tr>";
+
+            echo "<th>".$dataTypes[$i]."</th>";
+
+            if(!empty($_POST[$names[$i]])) {
+                echo "<td>".$_POST[$names[$i]]."</td>";
+            } else {
+                echo "<td class='null'> N/A </td>";
+            }
+
+            echo "</tr>";
+        }
+        echo "</table>";
+    ?>
 </body>
 </html>
