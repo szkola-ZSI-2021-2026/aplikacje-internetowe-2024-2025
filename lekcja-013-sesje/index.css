@@ -1,0 +1,36 @@
+body {
+    background-color: #333;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1,h2 {
+    color: lime;
+}
+
+form {
+    border: 1px solid white;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    padding: 10px;
+}
+
+.button {
+    margin-top: 10px;
+    width: 50%;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: #333;
+    color: white;
+    border: 1px solid white;
+}
+.button:hover {
+    color: lime;
+    border-color: lime;
+    box-shadow: 0 0 10px lime;
+}
+
+a{
+    color: lime;
+}
