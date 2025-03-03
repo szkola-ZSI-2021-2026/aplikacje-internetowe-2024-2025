@@ -81,5 +81,19 @@
 
     <h2>Koszyk</h2>
     <p>Lista produktów</p>
+    <form action="" method="get" class="koszyk">
+
+        <input type="checkbox" name="lista[]" id="klawiatura" value="klawiatura"> <label for="klawiatura">klawiatura</label><br>
+        <input type="checkbox" name="lista[]" id="myszka" value="myszka"> <label for="myszka">myszka</label><br>
+        <input type="checkbox" name="lista[]" id="glosniki" value="glosniki"> <label for="glosniki">glosniki</label> <br>
+        <input type="checkbox" name="lista[]" id="sluchawki" value="sluchawki"> <label for="sluchawki">sluchawki</label> <br>
+        <input type="checkbox" name="lista[]" id="drukarka" value="drukarka"> <label for="drukarka">drukarka</label> <br>
+        <input type="checkbox" name="lista[]" id="monitor" value="monitor"> <label for="monitor">monitor</label> <br>
+        <input type="checkbox" name="lista[]" id="telewizor" value="telewizor"> <label for="telewizor">telewizor</label> <br>
+        <input type="checkbox" name="lista[]" id="laptop" value="laptop"> <label for="laptop">laptop</label> <br>
+
+        <input type="submit" value="Dodaj do koszyka" class="button">
+    </form>
+    <a href="koszyk.php">Przejdź do koszyka</a>
 </body>
 </html>

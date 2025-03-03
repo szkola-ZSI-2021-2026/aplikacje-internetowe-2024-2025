@@ -18,12 +18,13 @@ form {
 
 .button {
     margin-top: 10px;
-    width: 50%;
+    width: 80%;
     padding: 5px;
     border-radius: 8px;
     background-color: #333;
     color: white;
     border: 1px solid white;
+    cursor: pointer;
 }
 .button:hover {
     color: lime;
@@ -33,4 +34,10 @@ form {
 
 a{
     color: lime;
+    cursor: pointer;
+}
+
+.koszyk {
+    text-align: left;
+    width: 150px;
 }
