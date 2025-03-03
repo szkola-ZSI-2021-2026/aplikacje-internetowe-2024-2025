@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +15,17 @@
 
     <?php
     
-    
+        if(isset($_SESSION['koszyk'])) {
+            echo "<ul>";
+
+            foreach ($_SESSION['koszyk'] as $produkt) {
+                echo "<li> $produkt </li>";
+            }
+
+            echo "</ul>";
+        }else {
+            echo "<p>BRAK PRODUKTÓW</p>";
+        }
     
     ?>
 

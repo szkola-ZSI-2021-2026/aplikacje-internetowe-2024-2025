@@ -85,7 +85,7 @@
 
         <input type="checkbox" name="lista[]" id="klawiatura" value="klawiatura"> <label for="klawiatura">klawiatura</label><br>
         <input type="checkbox" name="lista[]" id="myszka" value="myszka"> <label for="myszka">myszka</label><br>
-        <input type="checkbox" name="lista[]" id="glosniki" value="glosniki"> <label for="glosniki">glosniki</label> <br>
+        <input type="checkbox" name="lista[]" id="glosniki" value="glosn iki"> <label for="glosniki">glosniki</label> <br>
         <input type="checkbox" name="lista[]" id="sluchawki" value="sluchawki"> <label for="sluchawki">sluchawki</label> <br>
         <input type="checkbox" name="lista[]" id="drukarka" value="drukarka"> <label for="drukarka">drukarka</label> <br>
         <input type="checkbox" name="lista[]" id="monitor" value="monitor"> <label for="monitor">monitor</label> <br>
@@ -95,5 +95,24 @@
         <input type="submit" value="Dodaj do koszyka" class="button">
     </form>
     <a href="koszyk.php">Przejdź do koszyka</a>
+    <br>
+
+    <?php
+        // explode() - ze stringa tablica
+        // implode() - z tablicy string
+    
+        if(isset($_GET['lista'])) {
+            echo "wybrane produkty zostały dodane do koszyka";
+            if(!empty($_SESSION['koszyk'])) {
+                // jeśli koszyk nie jest pusty dodajemy kolejne produkty
+                $koszyk = array_unique(array_merge($_SESSION['koszyk'], $_GET['lista']));
+                $_SESSION['koszyk'] = $koszyk;
+
+            }else {
+                $_SESSION['koszyk'] = $_GET['lista'];
+            }
+        }
+
+    ?>
 </body>
 </html>
