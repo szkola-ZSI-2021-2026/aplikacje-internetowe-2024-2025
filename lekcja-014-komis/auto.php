@@ -46,7 +46,7 @@
             $q3 = "SELECT * from samochody where samochody.marka='fiat';";
             $res3 = mysqli_query($idConnection, $q3);
             while($row=mysqli_fetch_row($res3)){
-                echo "$row[0] / $row[1] / $row[2] / $row[3] / $row[4] / $row[5] / <br>"; 
+                echo "$row[0] / $row[1] / $row[2] / $row[3] / $row[4] / $row[5] /<br>"; 
             }
 
             // $arr=mysqli_fetch_array($res3)
