@@ -7,6 +7,9 @@
 </head>
 <body>
     <?php
+    // mysqli_connect('nazwahosta','user','haslo','baza') -> idPołączenia
+    // mysqli_query(idPołączenia, zapytanie) -> wynikZapytania
+    // mysqli_close(id_połączenia)
     
     ?>
 </body>
