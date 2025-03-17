@@ -38,6 +38,10 @@
         <?php
             // skrypt 2
             $query = "select nazwa,potoczna from grzyby where jadalny=1;";
+            $res = mysqli_query($idConn, $query);
+            while($row = mysqli_fetch_assoc($res)) {
+                echo "<p>".$row['nazwa']." (".($row['potoczna']).") </p>";
+            }
         ?>
 
         <h2>
@@ -45,8 +49,23 @@
         </h2>
         <?php
             // skrypt 3
-            $query = "select grzyby.nazwa,grzyby.potoczna,rodzina.nazwa from grzyby inner join rodzina on grzyby.rodzina_id=rodzina.id where grzyby.potrawy_id=1;";
+            $query = "select grzyby.nazwa as gNazwa,grzyby.potoczna,rodzina.nazwa as pNazwa from grzyby inner join rodzina on grzyby.rodzina_id=rodzina.id where grzyby.potrawy_id=1;";
 
+            $res = mysqli_query($idConn, $query);
+            echo "<ol>";
+
+            while ($row = mysqli_fetch_assoc($res)) {
+                echo "<li>".$row['gNazwa']." (".$row['potoczna']."), rodzina: ". $row['pNazwa']."</li>";
+            }
+
+            // metoda z wykorzystaniem mysqli_fetch_row 
+            // $res = mysqli_query($idConn, $query);
+            // while ($row = mysqli_fetch_row($res)) {
+            //     echo "<li>$row[0] ($row[1]), rodzina: $row[2]</li>";
+            // }
+
+            // print_r($mysqli_fetch_assoc($res));
+            echo "</ol>";
             mysqli_close($idConn);
         ?>
     </aside>
