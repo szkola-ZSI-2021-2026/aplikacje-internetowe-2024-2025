@@ -1,0 +1,4 @@
+Zapytanie 1: INSERT INTO filmy VALUES(NULL,5,4,"Suburbicon",2017,5);
+Zapytanie 2: 
+Zapytanie 3: 
+Zapytanie 4: 
