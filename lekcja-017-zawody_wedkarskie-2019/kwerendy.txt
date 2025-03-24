@@ -1,0 +1,4 @@
+Kwerenda 1: INSERT INTO zawody_wedkarskie VALUES(NULL,2,4,'2018-09-28','Tomasz Kowal');
+Kwerenda 2: 
+Kwerenda 3: 
+Kwerenda 4: 
