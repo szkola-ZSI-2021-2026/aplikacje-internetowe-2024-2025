@@ -17,7 +17,6 @@
 
             <ul>
                 <?php
-                
                     $conn = mysqli_connect("localhost", "root", "", "wedkowanie2");
 
                     $query = "SELECT nazwa, wystepowanie from ryby where styl_zycia = 1;";
@@ -25,7 +24,7 @@
                     $result = mysqli_query($conn, $query);
 
                     while($row = mysqli_fetch_row($result)) {
-                        echo "<li> $row[0]  $row[1] </li>";
+                        echo "<li> $row[0], występowanie: $row[1] </li>";
                     }
 
                     mysqli_close($conn);
@@ -34,7 +33,7 @@
         </div>
 
         <div id="right">
-            <img src="pliki1/ryba1.jpg" alt="Sum">
+            <img src="pliki1/ryba1.jpg" alt="Sum"> <br>
 
             <a href="kwerendy.txt">Pobierz kwerendy</a>
         </div>

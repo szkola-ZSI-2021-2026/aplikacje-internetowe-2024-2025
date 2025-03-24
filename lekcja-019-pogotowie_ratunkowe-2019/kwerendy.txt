@@ -1,0 +1,4 @@
+Kwerenda 1: INSERT INTO zgloszenia VALUES (null,1,4,'Warszawa, Staszica 34/5',1,'10:24:00');
+Kwerenda 2: select adres, dyspozytorzy_id FROM zgloszenia WHERE ratownicy_id = 3;
+Kwerenda 3: 
+Kwerenda 4: 
