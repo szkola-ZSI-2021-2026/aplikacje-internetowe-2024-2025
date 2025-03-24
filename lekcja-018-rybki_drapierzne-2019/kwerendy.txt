@@ -1,0 +1,4 @@
+zapytanie 1: SELECT nazwa, wystepowanie from ryby where styl_zycia = 1;
+zapytanie 2: 
+zapytanie 3: 
+zapytanie 4: 
