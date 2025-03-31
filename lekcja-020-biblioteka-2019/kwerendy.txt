@@ -1,4 +1,11 @@
 Zapytanie 1: INSERT INTO czytelnicy VALUES(NULL,'Anna','Michalak','an05mi');
 Zapytanie 2: SELECT czytelnicy.imie, czytelnicy.nazwisko FROM czytelnicy;
-Zapytanie 3: 
+Zapytanie 3: SELECT ksiazki.tytul FROM ksiazki INNER JOIN autorzy ON ksiazki.id_autor = autorzy.id WHERE autorzy.nazwisko = 'Fredro';
 Zapytanie 4: 
+
+
+
+
+
+
+wybierające jedynie pole nazwisko dla wszystkich rekordów w tabeli autorzy oraz obliczające ilość tytułów danego autora znajdujących się w bazie biblioteka. Pole obliczające ilość tytułów należy nazwać ilosc.

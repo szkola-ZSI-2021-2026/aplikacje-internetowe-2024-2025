@@ -36,8 +36,9 @@
                 $imie = $_POST['imie'];
                 $nazwisko = $_POST['nazwisko'];
                 $rok_urodzenia = $_POST['rok-urodzenia'];
-                $kod = strtolower($imie[0].$imie[1]).$rok_urodzenia[2].$rok_urodzenia[3].strtolower($nazwisko[0].$nazwisko[1]);
-                echo $kod."<br>";
+                // $kod = strtolower($imie[0].$imie[1]).$rok_urodzenia[2].$rok_urodzenia[3].strtolower($nazwisko[0].$nazwisko[1]);
+                $kod = strtolower(substr($imie,0,2).substr($rok_urodzenia,-2,2).substr($nazwisko,0,2));
+                // echo $kod."<br>";
 
                 $query = "INSERT INTO czytelnicy VALUES(NULL,'$imie','$nazwisko','$kod');";
 
