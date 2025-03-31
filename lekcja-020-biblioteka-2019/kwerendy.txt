@@ -1,0 +1,4 @@
+Zapytanie 1: INSERT INTO czytelnicy VALUES(NULL,'Anna','Michalak','an05mi');
+Zapytanie 2: SELECT czytelnicy.imie, czytelnicy.nazwisko FROM czytelnicy;
+Zapytanie 3: 
+Zapytanie 4: 
