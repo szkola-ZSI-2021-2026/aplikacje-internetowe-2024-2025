@@ -1,0 +1,42 @@
+body {
+    font-family: Georgia;
+}
+
+.left, .center {
+    background-color: #3cb371;
+    height: 100px;
+    width: 40%;
+    float: left;
+}
+
+.right {
+    background-color: #3cb371;
+    height: 100px;
+    width: 20%;
+    float: left;
+}
+
+.oneDay {
+    background-color: #ffdab9;
+    width: 170px;
+    height: 90px;
+    margin: 5px;
+    border: 1px solid #3cb371;
+}
+
+footer {
+    background-color: #3cb371;
+    color: white;
+}
+
+h6 {
+    text-align: right;
+}
+
+form {
+    padding: 30px;
+}
+
+main {
+    clear: both;
+}

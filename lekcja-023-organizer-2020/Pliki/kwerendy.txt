@@ -1,0 +1,17 @@
+Zapytanie 1: SELECT zadania.dataZadania, zadania.miesiac, zadania.wpis FROM zadania WHERE zadania.miesiac = 'Sierpien';
+Zapytanie 2: SELECT zadania.miesiac, zadania.rok FROM zadania WHERE zadania.dataZadania = '2020-08-01';
+Zapytanie 3: SELECT DISTINCT zadania.wpis FROM zadania WHERE zadania.wpis LIKE '%o';
+Zapytanie 4: UPDATE zadania SET zadania.wpis = "Wycieczka: Karkonosze" WHERE zadania.dataZadania = '2020-08-27';
+
+
+
+Zapytanie 1: wybierające jedynie pola dataZadania, miesiac i wpis z tabeli zadania dla zadań, 
+których miesiąc to sierpień
+
+− Zapytanie 2: wybierające jedynie pola miesiac i rok z tabeli zadania dla zadania z datą 2020-08-01
+
+Zapytanie 3: wybierające jedynie pole wpis i wyświetlające je bez powtórzeń, z tabeli zadania dla 
+wpisów kończących się literą „o”
+
+− Zapytanie 4: zmieniające pole wpis w tabeli zadania dla zadania z datą 2020-08-27, nowy wpis to
+„Wycieczka: Karkonosze”
