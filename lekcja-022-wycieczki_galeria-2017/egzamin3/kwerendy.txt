@@ -1,0 +1,4 @@
+Zapytanie 1: SELECT wycieczki.id, wycieczki.dataWyjazdu, wycieczki.cel, wycieczki.cena FROM wycieczki WHERE wycieczki.dostepna = '1';
+Zapytanie 2: SELECT zdjecia.nazwaPliku, zdjecia.podpis FROM zdjecia ORDER BY zdjecia.podpis ASC;
+Zapytanie 3: 
+Zapytanie 4: 
