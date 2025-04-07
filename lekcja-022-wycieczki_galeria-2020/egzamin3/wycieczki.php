@@ -40,7 +40,8 @@
                 $result1 = mysqli_query($connection, $query1);
             
                 while ($row = mysqli_fetch_row($result1)) {
-                    echo "<img src=''>";
+                    echo "<img src='$row[0]' alt='$row[1]''>";
+                    // echo $row[0]."<br>";
                 }
             ?>
 
@@ -69,8 +70,15 @@
         <h2>LISTA WYCIECZEK</h2>
         
         <?php
-        
-        
+            $query2 = "SELECT wycieczki.id, wycieczki.dataWyjazdu, wycieczki.cel, wycieczki.cena FROM wycieczki WHERE wycieczki.dostepna = '1';";
+
+            $result2 = mysqli_query($connection, $query2);
+
+            while($row = mysqli_fetch_row($result2)) {
+                echo "$row[0]. $row[1], $row[2], cena: $row[3] <br>";
+            }
+
+            mysqli_close($connection);
         ?>
 
     </section>
