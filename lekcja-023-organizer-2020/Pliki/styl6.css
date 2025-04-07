@@ -22,11 +22,13 @@ body {
     height: 90px;
     margin: 5px;
     border: 1px solid #3cb371;
+    float: left;
 }
 
 footer {
     background-color: #3cb371;
     color: white;
+    clear: both;
 }
 
 h6 {
@@ -35,8 +37,4 @@ h6 {
 
 form {
     padding: 30px;
-}
-
-main {
-    clear: both;
 }
