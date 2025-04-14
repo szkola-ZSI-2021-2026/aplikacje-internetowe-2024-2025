@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="styl2.css">
 </head>
 <body>
+    <!-- skrypt 2 -->
+    <?php
+        $connection = mysqli_connect("localhost", "root", "", "dane3");
+        if(!empty($_POST['nazwa']) && !empty($_POST['cena'])) {
+            $name = $_POST['nazwa'];
+            $price = $_POST['cena'];
+            
+            $query2 = "INSERT INTO produkty VALUES(null, 1, 4, '$name', 10, null, $price, 'owoce.jpg');";
+
+            mysqli_query($connection, $query2);
+        }
+        
+        mysqli_close($connection);
+    ?>
+
     <header>
         <div class="left">
             <h1>
@@ -45,7 +60,7 @@
             while ($row = mysqli_fetch_row($result1)) {
                 printBlock($row[4],$row[0],$row[2],$row[1],$row[3]);
             }
-        
+            mysqli_close($connection);
         ?>
     </main>
 
@@ -55,21 +70,6 @@
             Cena: <input type="text" name="cena">
             <input type="submit" value="Dodaj produkt">
         </form>
-
-        <!-- skrypt 2 -->
-
-        <?php
-            if(!empty($_POST['nazwa']) && !empty($_POST['cena'])) {
-                $name = $_POST['nazwa'];
-                $price = $_POST['cena'];
-            
-                $query2 = "INSERT INTO produkty VALUES(null, 1, 4, '$name', 10, null, $price, 'owoce.jpg');";
-
-                mysqli_query($connection, $query2);
-            }
-        
-            mysqli_close($connection);
-        ?>
 
         Stronę wykonał: PESEL
     </footer>
