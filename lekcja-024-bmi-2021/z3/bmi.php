@@ -63,9 +63,9 @@
                 $wzrost = $_POST['height'];
 
                 $bmi = ( $waga / ($wzrost * $wzrost) ) * 10000;
-                echo "Twoja waga: $waga ";
+                echo "Twoja waga: $waga; ";
                 echo "Twój wzrost: $wzrost";
-                echo "<br> BMI wynosi: $bmi <br>";
+                echo "<br> BMI wynosi: $bmi";
 
                 $przedzial;
                 if($bmi>=0 && $bmi<=18) { $przedzial = 1; }
