@@ -19,7 +19,7 @@
             mysqli_query($connection, $query2);
         }
         
-        mysqli_close($connection);
+        // mysqli_close($connection);
     ?>
 
     <header>
@@ -41,7 +41,7 @@
     <main>
         <!-- skrypt 1 -->
         <?php
-            $connection = mysqli_connect("localhost", "root", "", "dane3");
+            // $connection = mysqli_connect("localhost", "root", "", "dane3");
 
             $query1 = "SELECT produkty.nazwa, produkty.ilosc, produkty.opis, produkty.cena, produkty.zdjecie from produkty WHERE produkty.Rodzaje_id IN (1,2);";
 
