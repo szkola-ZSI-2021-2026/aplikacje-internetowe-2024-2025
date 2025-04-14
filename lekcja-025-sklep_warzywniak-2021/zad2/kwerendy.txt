@@ -1,4 +1,4 @@
 Zapytanie 1: SELECT produkty.nazwa, produkty.ilosc, produkty.opis, produkty.cena, produkty.zdjecie from produkty WHERE produkty.Rodzaje_id IN (1,2);
-Zapytanie 2: 
+Zapytanie 2: SELECT produkty.nazwa, producenci.nazwa FROM produkty INNER JOIN producenci ON producenci.id = produkty.Producenci_id WHERE produkty.ilosc<10 AND produkty.Rodzaje_id=1;
 Zapytanie 3: 
 Zapytanie 4: INSERT INTO produkty VALUES(null, 1, 4, 'owoc1', 10, null, 9.99, 'owoc.jpg');
