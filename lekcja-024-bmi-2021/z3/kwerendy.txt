@@ -1,0 +1,4 @@
+Zapytanie 1: select bmi.informacja, bmi.wart_min, bmi.wart_max from bmi;
+Zapytanie 2: insert into wynik VALUES(null,3,'20202-05-10',27);
+Zapytanie 3: 
+Zapytanie 4: 
