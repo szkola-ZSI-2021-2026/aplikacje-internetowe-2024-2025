@@ -68,10 +68,10 @@
                 echo "<br>BMI wynosi: $bmi";
 
                 $przedzial;
-                if($bmi>=0 && $bmi<=18) { $przedzial = 1; }
-                if($bmi>=19 && $bmi<=25) { $przedzial = 2; }
-                if($bmi>=26 && $bmi<=30) { $przedzial = 3; }
-                if($bmi>=31 && $bmi<=100) { $przedzial = 4; }
+                if($bmi>=0 && $bmi<19) { $przedzial = 1; }
+                if($bmi>=19 && $bmi<26) { $przedzial = 2; }
+                if($bmi>=26 && $bmi<31) { $przedzial = 3; }
+                if($bmi>=31 && $bmi<101) { $przedzial = 4; }
 
                 // echo $przedzial;
                 $time = time();
