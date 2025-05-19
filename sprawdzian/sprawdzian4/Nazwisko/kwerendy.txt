@@ -1,0 +1,4 @@
+kwerenda 1: SELECT towary.nazwa, towary.cena FROM towary LIMIT 4;
+kwerenda 2: SELECT towary.cena FROM towary WHERE towary.nazwa = 'cyrkiel';
+kwerenda 3: SELECT towary.nazwa FROM towary;
+kwerenda 4: SELECT towary.promocja, COUNT(towary.promocja) AS ilosc FROM towary GROUP BY towary.promocja;
