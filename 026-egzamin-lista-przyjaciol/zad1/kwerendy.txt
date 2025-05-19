@@ -1,0 +1,4 @@
+Zapytania 1: SELECT osoby.imie, osoby.nazwisko, osoby.opis, osoby.zdjecie FROM osoby WHERE osoby.Hobby_id IN(1,2,6);
+Zapytania 2: 
+Zapytania 3: 
+Zapytania 4: 
