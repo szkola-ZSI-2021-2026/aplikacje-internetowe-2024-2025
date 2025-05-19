@@ -60,7 +60,7 @@
                             echo "<p style='color:red'> hasła nie są takie same, konto nie został dodane </p>";
                         }else {
                             $enxryptedPassword = sha1($password);
-                            $query2 = "INSERT INTO uzytkownicy VALUES(null, 'Grzegorz', '$enxryptedPassword');";
+                            $query2 = "INSERT INTO uzytkownicy VALUES(null, '$login', '$enxryptedPassword');";
                             mysqli_query($connection, $query2);
                             echo "<span style='color:green;'>Konto zostało dodane <span>";
                         }
