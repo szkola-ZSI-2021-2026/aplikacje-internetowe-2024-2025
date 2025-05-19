@@ -19,6 +19,7 @@ main {
 
 .zdjecie {
     width: 20%;
+    float: left;
 }
 
 .opis {
@@ -26,5 +27,25 @@ main {
 }
 
 .linia {
-    
+    clear: both;
+}
+
+img {
+    padding: 20px;
+    border-radius: 100%;
+    float: left;
+}
+
+.left, .right {
+    width: 50%;
+    background-color: #005b4f;
+    color: white;
+    text-align: center;
+    height: 20px;
+    float: left;
+}
+
+h2 {
+    text-align: center;
+    background-color: #00897b;
 }
